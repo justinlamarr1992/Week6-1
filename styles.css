@@ -1,0 +1,166 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+font-family: 'Lexend Deca', sans-serif;
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700 
+font-family: 'Big Shoulders Display', cursive;
+*/
+
+:root {
+  /* Color */
+  --orange: hsl(31, 77%, 52%);
+  --dcyan: hsl(184, 100%, 22%);
+  --vdcyan: hsl(179, 100%, 13%);
+  --white: hsl(0, 0%, 100%, 0.75);
+  --gray: hsl(0, 0%, 95%);
+
+  /* Font */
+  --lex: "Lexend Deca", sans-serif;
+  --big-shoulder: "Big Shoulders Display", cursive;
+  --size: 15px;
+
+  --pad: 50px;
+}
+body {
+  background-color: var(--gray);
+  font-size: var(--size);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header {
+  height: 10vh;
+}
+main {
+  display: grid;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  max-width: 900px;
+  align-content: center;
+}
+footer {
+  height: 10vh;
+}
+
+section {
+  max-width: 300px;
+}
+.sedan {
+  background-color: var(--orange);
+  border-radius: 25px 0 0 25px;
+}
+.suv {
+  background-color: var(--dcyan);
+}
+.luxury {
+  background-color: var(--vdcyan);
+  border-radius: 0 25px 25px 0;
+}
+img {
+  padding-top: var(--pad);
+  padding-left: var(--pad);
+}
+h1 {
+  color: var(--gray);
+  padding-left: var(--pad);
+  font-family: var(--big-shoulder);
+  font-size: 40px;
+}
+p {
+  color: var(--white);
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+  padding-bottom: 20px;
+  font-family: var(--lex);
+  line-height: 30px;
+}
+.learn {
+  height: 45px;
+  width: 150px;
+  border: 0;
+  /* padding: var(--pad); */
+  /* margin-left: 50px;
+  margin-bottom: 50px; */
+  margin: 0 50px 50px 50px;
+  font-family: var(--lex);
+  border-radius: 25px;
+  background-color: var(--gray);
+}
+.sedbtn {
+  color: var(--orange);
+}
+.suvbtn {
+  color: var(--dcyan);
+}
+.luxbtn {
+  color: var(--vdcyan);
+}
+@media screen and (max-width: 740px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    max-width: 600px;
+  }
+  .sedan {
+    border-radius: 25px 0 0 0;
+  }
+  .suv {
+    border-radius: 0 25px 25px 0;
+  }
+  .luxury {
+    border-radius: 0 0 25px 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .sedan {
+    border-radius: 25px 25px 0 0;
+  }
+  .suv {
+    border-radius: 0;
+  }
+  .luxury {
+    border-radius: 0 0 25px 25px;
+  }
+}
