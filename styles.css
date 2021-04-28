@@ -51,6 +51,7 @@ font-family: 'Big Shoulders Display', cursive;
   --size: 15px;
 
   --pad: 50px;
+  --bor-rad: 10px;
 }
 body {
   background-color: var(--gray);
@@ -84,14 +85,14 @@ section {
 }
 .sedan {
   background-color: var(--orange);
-  border-radius: 25px 0 0 25px;
+  border-radius: var(--bor-rad) 0 0 var(--bor-rad);
 }
 .suv {
   background-color: var(--dcyan);
 }
 .luxury {
   background-color: var(--vdcyan);
-  border-radius: 0 25px 25px 0;
+  border-radius: 0 var(--bor-rad) var(--bor-rad) 0;
 }
 img {
   padding-top: var(--pad);
@@ -120,7 +121,7 @@ p {
   margin-bottom: 50px; */
   margin: 0 50px 50px 50px;
   font-family: var(--lex);
-  border-radius: 25px;
+  border-radius: var(--bor-rad);
   background-color: var(--gray);
 }
 .sedbtn {
@@ -139,13 +140,13 @@ p {
     max-width: 600px;
   }
   .sedan {
-    border-radius: 25px 0 0 0;
+    border-radius: var(--bor-rad) 0 0 0;
   }
   .suv {
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 var(--bor-rad) var(--bor-rad) 0;
   }
   .luxury {
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 var(--bor-rad) var(--bor-rad);
   }
 }
 
@@ -155,12 +156,12 @@ p {
     grid-auto-rows: auto;
   }
   .sedan {
-    border-radius: 25px 25px 0 0;
+    border-radius: var(--bor-rad) var(--bor-rad) 0 0;
   }
   .suv {
     border-radius: 0;
   }
   .luxury {
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 var(--bor-rad) var(--bor-rad);
   }
 }
